@@ -1,0 +1,35 @@
+<div class="container center">
+    <br>
+    <h2>List of Users</h2>
+    <br>
+    <a href="/create" class="btn btn-success">Create regular user</a>
+    <a href="/signup" class="btn btn-info">Create admin</a>
+    <br> <br> <br>
+    <table id="myTable" class="table">
+        <thead class="thead-dark">
+            <th scope="col">Username</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Type of User</th>
+            <th scope="col">Action</th>
+        </thead>
+        <tbody>
+            {{#each users}}
+            <tr>
+                <td>{{username}}</td>
+                <td>{{fullname}}</td>
+                {{#if isAdmin}}
+                <td> <b style="color: black;">Admin</b> </td>
+                {{else}}
+                <td>Regular</td>
+                {{/if}}
+                <td>
+                    <a href="/edit/{{id}}"><i class="far fa-edit"></i></a>
+                    <a href="/delete/{{id}}"><i class="far fa-trash-alt"></i></a>
+                    <a href="/changepassword/{{id}}"><i class="fas fa-key"></i></a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+<script src="/js/datatables.js"></script>

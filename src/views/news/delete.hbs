@@ -1,0 +1,34 @@
+<div class="container form-style center">
+    <br>
+    <h2 class="center">Are you sure you want to delete this news?</h2>
+    <form action="/news/delete/{{news.id}}" method="POST">
+        <button type="submit" class="btn btn-success">Delete</button>
+        <a href="/news/" class="btn btn-danger">Cancel</a>
+    </form>
+    <br>
+    <h6>Details:</h6>
+    <br>
+    <div id="newsFeed">
+        <article class="blog_style1">
+            <div class="blog_img">
+                <img class="img-fluid" src="/uploads/{{news.image}}" alt="">
+            </div>
+            <div class="blog_text">
+                <div class="blog_text_inner">
+                    <a href="/news/edit/{{news.id}}"><i class="far fa-edit"></i></a>
+                    <a href="/news/delete/{{news.id}}"><i class="far fa-trash-alt"></i></a>
+                    <br>
+                    <div class="cat">
+                        <br>
+                        <p> <i class="fa fa-calendar" aria-hidden="true"></i> {{date}}</p>
+                    </div>
+                    <a href="#">
+                        <h4>{{news.title}}</h4>
+                    </a>
+                    <p>{{news.summary}}</p>
+                    <p>{{news.body}}</p>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>

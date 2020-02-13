@@ -1,0 +1,21 @@
+<div class="container form-style center">
+    <br>
+    <h2 class="center">Are you sure you want to delete this user?</h2>
+    <br>
+    <h6>Details:</h6>
+    <br>
+    <b style="color: black;">Fullname</b>
+    <p>{{person.fullname}}</p>
+    <b style="color: black;">Username</b>
+    <p>{{person.username}}</p>
+    <b style="color: black;">Type of user</b>
+    {{#if person.isAdmin}}
+    <p>Admin</p>
+    {{else}}
+    <p>Regular</p>
+    {{/if}}
+    <form action="/delete/{{person.id}}" method="POST">
+        <button type="submit" class="btn btn-success">Delete</button>
+        <a href="/users" class="btn btn-danger">Cancel</a>
+    </form>
+</div>

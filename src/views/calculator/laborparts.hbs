@@ -1,0 +1,90 @@
+<div class="container center">
+    <br>
+    <h2>Labor vs. Parts</h2>
+    <br>
+    <table align="center" style="width: 720px;">
+        <tbody>
+            <tr>
+                <td style="width: 240px;">&nbsp;</td>
+                <td style="width: 240px;">
+                    <table width="240px">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h5>Total job cost</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table align="center">
+                                        <tbody>
+                                            <tr>
+                                                <td>$&nbsp;</td>
+                                                <td>
+                                                    <input type="number" id="job-cost" class="form-control" min="0"
+                                                        max="9999999" oninput="calculate()">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td style="width: 240px;">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 240px;">
+                    <h5>Labor</h5>
+                </td>
+                <td style="width: 240px;">&nbsp;</td>
+                <td style="width: 240px;">
+                    <h5>Materials</h5>
+                    <table border="0" align="center">
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td class="amount">
+                                    <label id="materials"></label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 240px;">
+                    <table border="0" align="center">
+                        <tbody>
+                            <tr>
+                                <td class="text">Rate</td>
+                                <td class="amount">
+                                    <input type="number" name="" id="rate" class="form-control" min="0" max="9999999"
+                                        oninput="calculate()">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text">Hours</td>
+                                <td class="amount">
+                                    <input type="number" name="" id="hours" class="form-control" min="0" max="9999999"
+                                        oninput="calculate()">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text">Total</td>
+                                <td class="amount">
+                                    <label id="total"></label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td style="width: 240px;">&nbsp;</td>
+                <td style="width: 240px;"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="/js/labor-parts.js"></script>

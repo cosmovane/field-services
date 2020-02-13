@@ -1,0 +1,27 @@
+<div class="container center">
+    <br>
+    <h1>Materials List</h1>
+    <br>
+    {{#if materials}}
+    <table id="myTable" class="table">
+        <thead class="thead-dark">
+            <th scope="col">Description</th>
+            <th scope="col">Category</th>
+            <th scope="col">Rate</th>
+        </thead>
+        <tbody>
+            {{#each materials}}
+            <tr>
+                <td>{{description}}</td>
+                <td>{{category}}</td>
+                <td>{{rate}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{else}}
+    There are no materials
+    {{/if}}
+</div>
+
+<script src="/js/datatables.js"></script>

@@ -1,0 +1,20 @@
+<div class="container center">
+    <br>
+    <h1 class="center">Field Services News</h1>
+    <br>
+    {{#if news}}
+    <div id="newsFeed">
+    </div>
+    <div class="center" id="pagination">
+    </div>
+    {{else}}
+    <p>There are no news</p>
+    {{/if}}
+    <br>
+</div>
+
+<script>
+    var news = {{{ json news }}} 
+    var user = {{{ json user}}}
+</script> 
+<script src="/js/pagination.js"></script>

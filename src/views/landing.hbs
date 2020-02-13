@@ -1,0 +1,163 @@
+<div class="container">
+    <br> <br>
+    {{#if user}}
+    <section class="home_banner_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5"></div>
+                <div class="col-lg-7">
+                    <div class="blog_text_slider owl-carousel">
+                        <div class="item">
+                            <div class="blog_text">
+                                <div class="cat">
+                                    <a class="cat_btn" href="/news/">News</a>
+                                    <a href="#"><i class="far fa-newspaper" aria-hidden="true"></i></a>
+                                </div>
+                                <a href="/news/">
+                                    <h4>News</h4>
+                                </a>
+                                <p>Find out about the latest and greatest news related to our "Field Services"
+                                    department.</p>
+                                <a class="blog_btn" href="/news/">Go</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="blog_text">
+                                <div class="cat">
+                                    <a class="cat_btn" href="/materials/">Materials</a>
+                                    <a href="#"><i class="fa fa-tools" aria-hidden="true"></i></a>
+                                </div>
+                                <a href="/materials/">
+                                    <h4>Materials list</h4>
+                                </a>
+                                <p>Here you will find the most recently published TA rates used to calculate
+                                    reimbursement of material costs to our vendors</p>
+                                <a class="blog_btn" href="/materials/">Go</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="blog_text">
+                                <div class="cat">
+                                    <a class="cat_btn" href="#">Calculator</a>
+                                    <a href="#"><i class="fa fa-calculator" aria-hidden="true"></i></a>
+                                </div>
+                                <a href="#">
+                                    <h4>Budget calculator</h4>
+                                </a>
+                                <p> Multiple tools used to calculate profit margin for all projects</p>
+                                <a class="blog_btn" href="#">Go</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog_area p_120 center">
+        <div class="container">
+
+            <h1>Most recent news</h1>
+            <br> <br>
+
+            {{#each news}}
+            <div class="row" style="width: 1100px;">
+                <div class="" style="width: 1100px;">
+                    <div class="blog_left_sidebar" style="width: 1100px;">
+                        <article class="blog_style1">
+                            <div class="blog_img">
+                                <img class="img-fluid" src="uploads/{{image}}" alt="">
+                            </div>
+                            <div class="blog_text">
+                                <div class="blog_text_inner">
+                                    <div class="cat">
+                                        <a><i class="fa fa-calendar" aria-hidden="true"></i> {{date}}</a>
+                                    </div>
+                                    <a href="/news/show/{{id}}">
+                                        <h4>{{title}}</h4>
+                                    </a>
+                                    <span style="width: 1100px; height:286px">
+                                        <p>{{summary}}</p>
+                                    </span>
+                                    
+                                    <a class="blog_btn" href="/news/show/{{id}}">Read More</a>
+                                </div>
+                            </div>
+                        </article>
+                        {{!-- <div class="row">
+                        <div class="col-md-6">
+                            <article class="blog_style1 small">
+                                <div class="blog_img">
+                                    <img class="img-fluid" src="img/home-blog/blog-small-1.jpg" alt="">
+                                </div>
+                                <div class="blog_text">
+                                    <div class="blog_text_inner">
+                                        <div class="cat">
+                                            <a class="cat_btn" href="#">Gadgets</a>
+                                            <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> March 14,
+                                                2018</a>
+                                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 05</a>
+                                        </div>
+                                        <a href="single-blog.html">
+                                            <h4>Nest Protect 2nd Gen Smoke CO Alarm</h4>
+                                        </a>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incidid unt ut labore et dolore magna aliqua.</p>
+                                        <a class="blog_btn" href="#">Read More</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-md-6">
+                            <article class="blog_style1 small">
+                                <div class="blog_img">
+                                    <img class="img-fluid" src="img/home-blog/blog-small-2.jpg" alt="">
+                                </div>
+                                <div class="blog_text">
+                                    <div class="blog_text_inner">
+                                        <div class="cat">
+                                            <a class="cat_btn" href="#">Gadgets</a>
+                                            <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> March 14,
+                                                2018</a>
+                                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 05</a>
+                                        </div>
+                                        <a href="single-blog.html">
+                                            <h4>Nest Protect 2nd Gen Smoke CO Alarm</h4>
+                                        </a>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incidid unt ut labore et dolore magna aliqua.</p>
+                                        <a class="blog_btn" href="#">Read More</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div> --}}
+                        {{!-- </div>  --}}
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+</div>
+
+
+<footer class="footer-area ">
+    <div class="container">
+        <div class="row footer-bottom d-flex justify-content-between align-items-center">
+            <p class="col-lg-12 footer-text text-center" style="color: white;">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is
+                made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                    target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+    </div>
+</footer>
+{{else}}
+<div class="container center">
+    <h1>Sign in</h1> <br>
+    <a href="/signin" class="btn btn-success">Sign in</a>
+</div>
+{{/if}}

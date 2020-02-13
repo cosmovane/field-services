@@ -1,0 +1,103 @@
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navcolor">
+        <div class="container">
+            <a class="navbar-brand" href="/" >
+                <img src="/img/banner/logo.png" alt="" width="40" height="40">
+                <span>
+                    Field Services | 
+                    <span style="font-size: 9px;">Knowledge Base</span>                    
+                </span>
+             </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            {{#if user}}
+            <div class="collapse navbar-collapse" id="navbarNav">
+                {{#if user.isAdmin}}
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/users">Users</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            News
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/news/">List</a>
+                            <a class="dropdown-item" href="/news/create">Add News</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Materials
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/materials/">List</a>
+                            <a class="dropdown-item" href="/materials/create">Add Material</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Calculator
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/calculator/">Budget Calculator</a>
+                            <a class="dropdown-item" href="/mileage">Mileage Calculator</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link"
+                            href="https://tausa-my.sharepoint.com/:f:/g/personal/cflores_tech-americas_com/EpvnDiXihydPmYu0ChWaBxEBkkjs4f1rF6d_H-s7f-Au_A?e=Tw6CP9"
+                            target="_blank">Documents</a>
+                        {{!-- Para usuarios normales, debe ser un enlace sin permisos de edicion --}}
+                        {{else}}
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/news/">News</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/materials/">Materials List</a>
+                            </li>
+                            <li class="nav-item dropdown active">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Calculator
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right animate slideIn"
+                                    aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/calculator/">Budget Calculator</a>
+                                    <a class="dropdown-item" href="/mileage">Mileage Calculator</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item active">
+                                <a class="nav-link"
+                                    href="https://tausa-my.sharepoint.com/:f:/g/personal/vnunez_tech-americas_com/EhxOgg42hbFFm2lq1JiknVIBK0X42-lA9CgEreR8PU8T6Q?e=0XZzGy"
+                                    target="_blank">Documents</a>
+                                {{!-- Para usuarios normales, debe ser un enlace sin permisos de edicion --}}
+                            </li>
+                    </li>
+                    {{/if}}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{user.fullname}}
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/signout">Sign out</a>
+                        </div>
+                    </li>   
+                </ul>
+                {{/if}}
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

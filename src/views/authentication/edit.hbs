@@ -1,0 +1,19 @@
+<div class="container form-style">
+    <br>
+    <h2>Edit user {{person.fullname}}</h2>
+    <br>
+    <form action="/edit/{{person.id}}" method="post">
+    <p><span style="color:red">*</span> <span class="required-field">Required</span></p>
+        <div class="form-group">
+            <label>Full name <span style="color:red">*</span></label>
+            <input type="text" class="form-control" name="fullname" value="{{person.fullname}}" required>
+        </div>
+        <div class="form-group">
+            <label>Username <span style="color:red">*</span></label>
+            <input type="text" class="form-control" name="username" value="{{person.username}}" required>
+        </div>
+
+        <button type="submit" class="btn btn-success">Edit</button>
+        <a href="/users" class="btn btn-danger">Cancel</a>
+    </form>
+</div>
