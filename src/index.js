@@ -8,7 +8,7 @@ const { database } = require('./keys')
 const MySQLStore = require('express-mysql-session')
 const passport = require('passport')
 const http = require('http')
-const multer = require('multer')
+const multer = require('multer') 
 
 // multer configuration for images
 const storage = multer.diskStorage({
