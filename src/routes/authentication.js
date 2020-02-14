@@ -95,7 +95,6 @@ router.get('/delete/:id', adminIsLoggedIn, async (req, res) => {
 
 router.post('/delete/:id', adminIsLoggedIn, async (req, res) => {
     const { id } = req.params
-    console.log("TCL: req.params", req.user.id)
     if (id != req.user.id) {
         await pool.query('DELETE FROM users WHERE id = ?', [id])
         req.flash('success', 'User deleted')
