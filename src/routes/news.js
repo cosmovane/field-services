@@ -47,8 +47,11 @@ router.get('/edit/:id', adminIsLoggedIn, async (req, res) => {
 
 router.post('/edit/:id', adminIsLoggedIn, async (req, res) => {
     const { id } = req.params
+    console.log("TCL: id", id)
     const { title, summary, body } = req.body
+    console.log("TCL: title, summary, body", title, summary, body)
     let imageName
+    console.log(req.file);
     if (req.file) {
         const validType = helpers.fileType((req.file.mimetype).toLowerCase(), (req.file.originalname).toLowerCase())
         const imageSize = helpers.imageSize(req.file.size)
@@ -61,9 +64,11 @@ router.post('/edit/:id', adminIsLoggedIn, async (req, res) => {
             res.redirect('/news/create')
         }
         imageName = req.file.filename
+        console.log("TCL: imageName", imageName)
     } else {
         const imageResult = await pool.query('SELECT image FROM news WHERE id = ?', [id])
         imageName = imageResult[0].image
+        console.log("TCL: imageName", imageName)
     }
     await pool.query('UPDATE news SET title = ?, summary = ?, image = ?, body = ? WHERE id = ?', [title, summary, imageName, body, id])
     req.flash('success', 'News updated')
