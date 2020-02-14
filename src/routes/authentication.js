@@ -10,12 +10,12 @@ router.get('/users', adminIsLoggedIn, async (req, res) => {
     res.render('authentication/users', { users })
 })
 
-router.get('/signup', adminIsLoggedIn, (req, res) => {
+router.get('/signup', (req, res) => {
     res.render('authentication/signup')
 })
 
-router.post('/signup', adminIsLoggedIn,
-    passport.authenticate('local.adminSignUp', {
+router.post('/signup',
+    passport.authenticate('local.adminSignUp', { 
         successRedirect: '/users',
         failureRedirect: '/users',
         failureFlash: true
