@@ -82,7 +82,7 @@ app.use(require('./routes/authentication'))
 app.use('/news', require('./routes/news'))
 app.use('/materials', require('./routes/materials'))
 
-//public
+//public directory
 app.use(express.static(path.join(__dirname, '/public')))
 
 //starting server
