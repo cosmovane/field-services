@@ -1,0 +1,244 @@
+<div class="container center">
+    <br>
+    <h2>Budget calculator</h2>
+    <br>
+    <table style="width: 1140;">
+        <tbody>
+            <tr>
+                <td style="width: 380px;">
+                    <h3>&nbsp;&nbsp;&nbsp;&nbsp;Costs</h3>
+                </td>
+                <td style="width: 380px;">
+                    <h3>&nbsp;&nbsp;&nbsp;&nbsp;Revenue</h3>
+                </td>
+                <td style="width: 380px;">
+                    <h3>Quick look</h3>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 380px;">
+                    <table style="width: 215px; margin-left:85px;">
+                        <tbody>
+                            <tr>
+                                <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Qty</h6>
+                            </tr>
+                            <tr>
+                                <td><label>Rate 1 $</label></td>
+                                <td> <input type="number" class="form-control rate" id="rate1-labor-cost"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                                <td> <input type="number" class="form-control qty" id="qty1-labor-cost"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Rate 2 $</label></td>
+                                <td> <input type="number" class="form-control rate" id="rate2-labor-cost"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                                <td> <input type="number" class="form-control qty" id="qty2-labor-cost"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Rate 3 $</label></td>
+                                <td> <input type="number" class="form-control rate" id="rate3-labor-cost"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                                <td> <input type="number" class="form-control qty" id="qty3-labor-cost"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Labor: </label></td>
+                                <td><label id="total-labor-cost"></label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </td>
+                <td style="width: 380px;">
+                    <table style="width: 215px; margin-left:85px;">
+                        <tbody>
+                            <tr>
+                               <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Qty</h6>
+                            </tr>
+                            <tr>
+                                <td><label>Rate 1 $</label></td>
+                                <td> <input type="number" class="form-control rate" id="rate1-labor-revenue"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                                <td> <input type="number" class="form-control qty" id="qty1-labor-revenue"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Rate 2 $</label></td>
+                                <td> <input type="number" class="form-control rate" id="rate2-labor-revenue"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                                <td> <input type="number" class="form-control qty" id="qty2-labor-revenue"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Rate 3 $</label></td>
+                                <td> <input type="number" class="form-control rate" id="rate3-labor-revenue"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                                <td> <input type="number" class="form-control qty" id="qty3-labor-revenue"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Labor: </label></td>
+                                <td><label id="total-labor-revenue"></label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td style="width: 380px;">
+                    <table style="width: 205px; margin-left:85px;">
+                        <tbody>
+                            <tr>
+                                &nbsp;
+                            </tr>
+                            <tr>
+                                <h6>Income Calibrator</h6>
+                            </tr>
+                            <tr>
+                                <td><label>Target %</label></td>
+                                <td> <input type="number" class="form-control rate" id="target-income"
+                                        oninput="calculate()" min="0" max="99.99"> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Cost $</label></td>
+                                <td> <input type="number" class="form-control rate" id="cost-income"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Price</label></td>
+                                <td> <label id="price-income"></label> </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 380px;">
+                    <table style="width: 215px; margin-left:85px;">
+                        <tbody>
+                            <tr>
+                                <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Qty</h6>
+                            </tr>
+                            <tr>
+                                <td><label>Rate 4 $</label></td>
+                                <td> <input type="number" class="form-control rate" id="rate1-other-cost"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                                <td> <input type="number" class="form-control qty" id="qty1-other-cost"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Rate 5 $</label></td>
+                                <td> <input type="number" class="form-control rate" id="rate2-other-cost"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                                <td> <input type="number" class="form-control qty" id="qty2-other-cost"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Rate 6 $</label></td>
+                                <td> <input type="number" class="form-control rate" id="rate3-other-cost"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                                <td> <input type="number" class="form-control qty" id="qty3-other-cost"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Other: </label></td>
+                                <td><label id="total-other-cost"> </label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td style="width: 380px;">
+                    <table style="width: 215px; margin-left:85px;">
+                        <tbody>
+                            <tr>
+                                <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Qty</h6>
+                            </tr>
+                            <tr>
+                                <td><label>Rate 4 $</label></td>
+                                <td> <input type="number" class="form-control rate" id="rate1-other-revenue"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                                <td> <input type="number" class="form-control qty" id="qty1-other-revenue"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Rate 5 $</label></td>
+                                <td> <input type="number" class="form-control rate" id="rate2-other-revenue"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                                <td> <input type="number" class="form-control qty" id="qty2-other-revenue"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Rate 6 $</label></td>
+                                <td> <input type="number" class="form-control rate" id="rate3-other-revenue" oninput="calculate()" min="0" max="9999999"> </td>
+                                <td> <input type="number" class="form-control qty" id="qty3-other-revenue"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Other: </label></td>
+                                <td><label id="total-other-revenue"> </label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td style="width: 380px;">
+                    <table style="width: 205px; margin-left:85px;">
+                        <tbody>
+                            <tr>
+                                &nbsp;
+                            </tr>
+                            <tr>
+                                <h6>Percentage</h6>
+                            </tr>
+                            <tr>
+                                <td><label>Target %</label></td>
+                                <td> <input type="number" class="form-control rate" id="target-expense"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Income $</label></td>
+                                <td> <input type="number" class="form-control rate" id="income-expense"
+                                        oninput="calculate()" min="0" max="9999999"> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Cost</label></td>
+                                <td> <label id="cost-expense"></label> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 380px;">
+                    <b style="color: black;">Total:</b>
+                    <label id="total-cost"></label>
+                </td>
+                <td style="width: 380px;">
+                    <b style="color: black;">Total:</b>
+                    <label id="total-revenue"></label>
+                </td>
+                <td style="width: 380px; font-size: 20px;">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <br>
+                    <b style="font-size: 20px;">Profit:</b>
+                    <label id="profit" style="font-size: 20px;"></label>
+                    <br> <br>
+                    <p><b style="font-size: 20px;">Profit Margin:</b>
+                    <label id="percentage" style="font-size: 20px;"></label>
+                    </p>
+                    
+                    
+                </td>
+                <td style="width: 380px;">
+                    <br>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script src="/js/budget-calculator.js"></script>

@@ -1,0 +1,29 @@
+<div class="container form-style">
+    <br>
+    <h2>Edit News</h2>
+    <form action="/news/edit/{{news.id}}" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <p><span style="color:red">*</span> <span class="required-field">Required</span></p>
+            <label for="exampleFormControlInput1">News title <span style="color:red">*</span></label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="News title" minlength="1"
+                name="title" maxlength="150" required value={{news.title}} >
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Summary <span style="color:red">*</span></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" minlength="1" maxlength="500"
+                placeholder="Write a summary of this news" name="summary" required>{{news.summary}}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Upload image <b><span class="clarification">Image size should be 800x340px, less than 2MB and with extension jpg, jpeg or png</span></b></label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Body <span style="color:red">*</span></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="25" minlength="1" maxlength="10000"
+                placeholder="Write the news body" name="body" required>{{news.body}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Edit</button>
+        <a href="/news/" class="btn btn-danger">Cancel</a>
+    </form>
+    <br>
+</div>

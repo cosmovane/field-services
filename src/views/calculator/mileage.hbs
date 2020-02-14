@@ -1,0 +1,51 @@
+<div class="container center">
+    <br>
+    <h2>Mileage/Travel Calculator</h2>
+    <br>
+    <table style="width: 600px;" align="center">
+        <tbody>
+            <tr>
+                <td style="width: 200px;">
+                    <h6>One way miles</h6>
+                </td>
+                <td style="width: 300px;"><input type="number" id="one-way-miles" class="form-control" min="0"
+                        max="9999999" oninput="calculate()"></td>
+            </tr>
+            <tr>
+                <td style="width: 200px;">
+                    <br>
+                    <h6>Round trip</h6>
+                </td>
+                <td style="width: 300px;">
+                    <br>
+                    <label id="round-trip"></label>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 200px;">&nbsp;</td>
+                <td style="width: 300px;">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 200px;">
+                    <br>
+                    <h6>Per mile &nbsp;&nbsp;&nbsp;&nbsp;$</h6>
+                </td>
+                <td style="width: 300px;">
+                    <input type="number" id="mile-cost" class="form-control" min="0" max="9999999"
+                        oninput="calculate()">
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 200px;">
+                    <br>
+                    <h6>Travel cost</h6>
+                </td>
+                <td style="width: 300px;">
+                    <br>
+                    <label id="travel-cost"></label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script src="/js/mileage.js"></script>
