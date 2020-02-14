@@ -10,11 +10,11 @@ router.get('/users', adminIsLoggedIn, async (req, res) => {
     res.render('authentication/users', { users })
 })
 
-router.get('/signup', (req, res) => {
+router.get('/signup', adminIsLoggedIn, (req, res) => { 
     res.render('authentication/signup')
 })
 
-router.post('/signup',
+router.post('/signup', adminIsLoggedIn,
     passport.authenticate('local.adminSignUp', { 
         successRedirect: '/users',
         failureRedirect: '/users',
